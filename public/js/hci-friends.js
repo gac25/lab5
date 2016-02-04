@@ -12,6 +12,16 @@ function initializePage() {
 	console.log("Javascript connected!");
 }
 
+$(".friend h3").click(function(e){
+	e.preventDefault()
+	
+	var n= $(this).text()
+	var na = anagrammedName(n)
+	$(this).text(na)
+});
+  
+ 
+
 function anagrammedName(name) {
 	// Thanks, Internet Anagram Server!
 	
@@ -43,4 +53,5 @@ function anagrammedName(name) {
 		console.log(name + " not known for anagramming.");
 		return name;
 	}
+	
 }
